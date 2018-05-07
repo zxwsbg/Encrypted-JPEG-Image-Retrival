@@ -1,9 +1,9 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%Copyright (c) 2018--2088 BoWen_Shi. All rights reserved.%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%Nanjing University of Information Science & Technology%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%Nuist_ACM-ICPC team member%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%Think_Spirit 2017%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%Copyright (c) 2018--2088 BoWen_Shi. All rights reserved.%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%Nanjing University of Information Science & Technology%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%Nuist_ACM-ICPC team member%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%Think_Spirit 2017%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 clear all;
 clc;
 
@@ -22,7 +22,7 @@ strInriaDataFileSavePath = 'E:\INRIA HOLIDAYS DATASET\eval_holidays';
 
 %% 计算局部直方图
 [imgNames,localHistograms,localHistograms_Y,localHistograms_U,localHistograms_V,runningTime] = JPGOWFunc_GenLocalBlockHistogram(strImgFolder);
-strDataSave = 'D:\JPGOW\Encrypted-JPEG-Image-Retrival\';
+strDataSave = 'D:\Encrypted-JPEG-Image-Retrival-master\';
 strDataSave = [strDataSave retrival_type];
 strDataSave = [strDataSave 'LocalHistograms'];
 save([strDataSave '.mat'],'imgNames','localHistograms','localHistograms_Y','localHistograms_U','localHistograms_V','runningTime', '-v7.3');

@@ -1,14 +1,14 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%Copyright (c) 2018--2088 BoWen_Shi. All rights reserved.%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%Nanjing University of Information Science & Technology%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%Nuist_ACM-ICPC team member%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%Think_Spirit 2017%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%Copyright (c) 2018--2088 BoWen_Shi. All rights reserved.%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%Nanjing University of Information Science & Technology%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%Nuist_ACM-ICPC team member%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%Think_Spirit 2017%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 clear all;
 clc;
 
 %% 参数设定
-strImgFolder = 'D:\jpg1\';
+strImgFolder = 'D:\jpg\';
 retrival_type='CH';
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 localFeatureSelectStep  = 1;%% 
@@ -21,7 +21,7 @@ globalFeatureDistanceType = 'cityblock';%% cityblock 比euclidean通常要好。
 strInriaDataFileSavePath = 'E:\INRIA HOLIDAYS DATASET\eval_holidays';
 
 %% 读取每张图片的特征向量直方图
-strDataLoad = 'D:\JPGOW\Encrypted-JPEG-Image-Retrival\';
+strDataLoad = 'D:\Encrypted-JPEG-Image-Retrival-master\';
 strDataLoad = [strDataLoad retrival_type];
 strDataLoad = [strDataLoad 'LocalHistograms'];
 data = load(strDataLoad);
@@ -41,9 +41,8 @@ end
 AllStd_Y=std(temp_Y,0,1);
 AllStd_U=std(temp_U,0,1);
 AllStd_V=std(temp_V,0,1);
-
-%% 
-%%将每一幅图都与其他图片比较，计算出他们的距离
+ 
+%% 将每一幅图都与其他图片比较，计算出他们的距离
 %%由于比较的不对称性，a和b的距离 与 b和a的距离 可能是不同的
 tic;
 for i=1:imgNum-1

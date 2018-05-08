@@ -21,7 +21,7 @@ globalFeatureDistanceType = 'cityblock';%% cityblock 比euclidean通常要好。
 strInriaDataFileSavePath = 'E:\INRIA HOLIDAYS DATASET\eval_holidays';
 
 %% 读取每张图片的特征向量直方图
-strDataLoad = 'D:\Encrypted-JPEG-Image-Retrival-master\';
+strDataLoad = 'D:\JOBGW\Encrypted-JPEG-Image-Retrival\';
 strDataLoad = [strDataLoad retrival_type];
 strDataLoad = [strDataLoad 'LocalHistograms'];
 data = load(strDataLoad);
@@ -65,7 +65,7 @@ w3=1;
 MatrixDist_all = MatrixDist_Y*w1+MatrixDist_U*w2+MatrixDist_V*w3;
 
 %% 存储结果
-strDataSave = 'D:\JPGOW\Encrypted-JPEG-Image-Retrival\';
+strDataSave = 'D:\JOBGW\Encrypted-JPEG-Image-Retrival\';
 strDataSave = [strDataSave retrival_type];
 strDataSave = [strDataSave 'MatrixDist'];
 save([strDataSave '.mat'],'MatrixDist_Y','MatrixDist_all ','MatrixDist_U','MatrixDist_V','runningTime', '-v7.3');

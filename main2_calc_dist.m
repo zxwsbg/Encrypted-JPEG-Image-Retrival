@@ -8,7 +8,7 @@ clear all;
 clc;
 
 %% 参数设定
-strImgFolder = 'D:\jpg\';
+strImgFolder = 'D:\jpg1\';
 retrival_type='CH';
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 localFeatureSelectStep  = 1;%% 
@@ -21,7 +21,7 @@ globalFeatureDistanceType = 'cityblock';%% cityblock 比euclidean通常要好。
 strInriaDataFileSavePath = 'E:\INRIA HOLIDAYS DATASET\eval_holidays';
 
 %% 读取每张图片的特征向量直方图
-strDataLoad = 'D:\JOBGW\Encrypted-JPEG-Image-Retrival\';
+strDataLoad = 'D:\JPGOW\Encrypted-JPEG-Image-Retrival\';
 strDataLoad = [strDataLoad retrival_type];
 strDataLoad = [strDataLoad 'LocalHistograms'];
 data = load(strDataLoad);

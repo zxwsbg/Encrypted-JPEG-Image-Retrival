@@ -22,7 +22,7 @@ strInriaDataFileSavePath = 'E:\INRIA HOLIDAYS DATASET\eval_holidays';
 
 %% 计算局部直方图
 [imgNames,localHistograms,localHistograms_Y,localHistograms_U,localHistograms_V,runningTime] = JPGOWFunc_GenLocalBlockHistogram(strImgFolder);
-strDataSave = 'D:\JOBGW\Encrypted-JPEG-Image-Retrival\';
+strDataSave = 'D:\JPGOW\Encrypted-JPEG-Image-Retrival\';
 strDataSave = [strDataSave retrival_type];
 strDataSave = [strDataSave 'LocalHistograms'];
 save([strDataSave '.mat'],'imgNames','localHistograms','localHistograms_Y','localHistograms_U','localHistograms_V','runningTime', '-v7.3');

@@ -1,4 +1,4 @@
-function [] = JPGOWFunc_GenInriaRstDat(Features,imgNames,imgClass,distanceType,strSavePath)
+function [] = JPGOWFunc_GenInriaRstDat(Features,imgNames,imgClass,strSavePath)
     disp('In JPGOWFunc_GenInriaRstDat...');
     tic;
     imgNum = size(Features,1);
@@ -9,11 +9,13 @@ function [] = JPGOWFunc_GenInriaRstDat(Features,imgNames,imgClass,distanceType,s
         queryImageName = strcat(int2str(1000 + classIdx -1),'00.jpg');
         for imgIdx = 1:imgNum
             if queryImageName == imgNames{imgIdx}
-                queryFeature= Features(imgIdx,:);
+                queryImageNum= imgIdx;
+                break;
             end
         end
         %%%%%%%%%%%%%%
-        similarDistance = pdist2(queryFeature,Features,distanceType);% 
+        similarDistance = zeros(1*imgNum);
+        similarDistance = Features(queryImageNum,:);% 
         [~,Idx]=sort(similarDistance);% similarDistance is a 1-D vector
 
         strRst{classIdx} = queryImageName;
@@ -33,7 +35,6 @@ function [] = JPGOWFunc_GenInriaRstDat(Features,imgNames,imgClass,distanceType,s
                 end
             end
         end
-
     end
     %% make file
     fid = fopen(strSavePath,'w');
